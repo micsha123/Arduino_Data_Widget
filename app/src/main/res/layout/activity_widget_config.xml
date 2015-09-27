@@ -1,0 +1,59 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context="ru.mail.micsha.arduinodatawidget.activity.WidgetConfigActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/widget_options"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_parameter_name"
+            android:textAppearance="?android:attr/textAppearanceLargePopupMenu" />
+
+        <EditText
+            android:id="@+id/parameter_name_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"/>
+
+        <CheckBox
+            android:id="@+id/parameter_name_checked"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/show_parameter_name"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/general_options_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/general_options"/>
+
+        <Button
+            android:id="@+id/add_widget_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_settings"/>
+    </TableLayout>
+
+</FrameLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.mail.micsha.arduinodatawidget" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".activity.WidgetConfigActivity"
+            android:label="@string/title_activity_widget_config" >
+        </activity>
+
+        <receiver android:name=".widget.ArduinoAppWidget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/arduino_app_widget_info" />
+        </receiver>
+
+        <service
+            android:name=".service.BroadcastService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <activity
+            android:name=".activity.GeneralOptionsActivity"
+            android:label="@string/title_activity_general_options"
+            android:parentActivityName=".activity.WidgetConfigActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.mail.micsha.arduinodatawidget.activity.WidgetConfigActivity" />
+        </activity>
+    </application>
+
+</manifest>
